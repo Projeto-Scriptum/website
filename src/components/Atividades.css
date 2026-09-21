@@ -1,6 +1,8 @@
 .atividades-section {
   background-color: var(--amarelo-scriptum, #fdf800);
   padding: 5rem 2rem 6rem 2rem;
+  display: flex;
+  justify-content: center;
   border-bottom: 3px solid #000000;
 }
 
