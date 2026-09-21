@@ -6,11 +6,18 @@
   --texto-escuro: #333333;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background-color: var(--fundo-pastel);
   color: var(--texto-escuro);
+  overflow-x: hidden;
 }
 
 h1,
