@@ -1,6 +1,7 @@
 .manifesto-container {
   width: 100%;
-  background-color: var(--amarelo-scriptum);
+  margin-bottom: 6rem;
+  background-color: var(--preto-scriptum);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +10,7 @@
 .manifesto-container h1 {
   text-align: center;
   font-size: 2rem;
+  color: var(--amarelo-scriptum);
 }
 
 @media (max-width: 768px) {
