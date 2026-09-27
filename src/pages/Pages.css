@@ -6,6 +6,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.page-shell.gallery-page {
+  padding-inline: 0;
+}
+.gallery-page .page-container {
+  width: 100%;
+  padding-inline: 7.5rem;
+}
 .page-intro {
   max-width: 760px;
 }
@@ -187,6 +194,11 @@
   .page-callout {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-page .page-container {
+    padding-inline: 2.5rem;
   }
 }
 @media (max-width: 600px) {
