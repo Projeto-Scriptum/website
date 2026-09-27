@@ -86,13 +86,18 @@
 }
 
 .faq-answer-wrapper {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
 }
 
 .faq-answer-wrapper.open {
-  max-height: 200px;
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-content {
+  min-height: 0;
+  overflow: hidden;
 }
 
 .faq-answer {
