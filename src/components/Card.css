@@ -28,7 +28,7 @@
 }
 
 .card-dark {
-  background-color: #000000;
+  background-color: var(--preto-scriptum);
 }
 .card-dark .card-kicker {
   color: var(--amarelo-scriptum, #fdf800);

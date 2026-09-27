@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import BotaoAjuda from "./components/BotaoAjuda";
 import Header from "./components/Header";
 import Manifesto from "./components/Manifesto";
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Header />
+      <Hero />
       <Manifesto />
       <Atividades />
       <Faq />
