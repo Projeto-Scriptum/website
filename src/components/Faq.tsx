@@ -27,7 +27,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="faq-section" id="duvidas">
+    <section className="faq-section" id="duvidas" tabIndex={-1}>
       <div className="faq-container">
         <div className="faq-header">
           <p className="faq-kicker">PERGUNTAS FREQUENTES</p>

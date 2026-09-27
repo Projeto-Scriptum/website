@@ -9,10 +9,11 @@
 }
 
 .hero-left {
+  min-width: 0;
   flex: 1;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   padding: 2.5rem;
 }
 
@@ -22,6 +23,7 @@
 }
 
 .hero-right {
+  min-width: 0;
   flex: 1;
   display: flex;
   align-items: center;
@@ -40,7 +42,7 @@
   .hero-container {
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .hero-left {

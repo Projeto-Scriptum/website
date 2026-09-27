@@ -1,10 +1,34 @@
 .card {
+  border: 2px solid var(--preto-scriptum);
+  min-width: 0;
   box-shadow: 6px 6px 0px #000000;
   padding: 2.5rem 2rem;
   border-radius: 0;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
+}
+
+.card-imagem {
+  margin: 0 0 1.5rem;
+}
+.card-imagem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  border: 2px solid var(--preto-scriptum);
+  background: var(--fundo-pastel);
+}
+.card-imagem figcaption {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 0.6rem;
+  color: var(--texto-escuro);
+}
+.card-dark .card-imagem figcaption {
+  color: #f0f0f0;
 }
 
 .card:hover {

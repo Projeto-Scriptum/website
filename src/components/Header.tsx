@@ -1,36 +1,42 @@
 import "./Header.css";
 import logoScriptum from "/logo.png";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <a href="#inicio">
+        <Link to="/#inicio" aria-label="Projeto Scriptum, início">
           <img src={logoScriptum} alt="Projeto Scriptum" className="logo-img" />
-        </a>
+        </Link>
       </div>
 
-      <nav>
+      <nav aria-label="Navegação principal">
         <ul className="nav-list">
           <li>
-            <a href="#sobre" className="nav-link">
+            <Link to="/#sobre" className="nav-link">
               Sobre
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#atividades" className="nav-link">
+            <Link to="/#atividades" className="nav-link">
               Atividades
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#duvidas" className="nav-link">
+            <Link to="/#duvidas" className="nav-link">
               Dúvidas
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#voluntariado" className="nav-link btn-voluntario">
+            <NavLink to="/galeria" className="nav-link">
+              Galeria
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/voluntariado" className="nav-link btn-voluntario">
               Quero ser voluntário
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
