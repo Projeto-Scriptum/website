@@ -74,8 +74,8 @@
 }
 
 .card-kicker {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   font-size: 0.75rem;
   text-transform: uppercase;
   margin: 0 0 0.5rem 0;
@@ -84,9 +84,9 @@
 
 .card-titulo {
   margin: 0 0 1rem 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--fonte-titulos);
   font-size: 1.6rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .card-texto {

@@ -5,6 +5,7 @@
   --fundo-pastel: #fdfbf7;
   --texto-escuro: #333333;
   --preto-scriptum: #121214;
+  --fonte-titulos: "Kalam", cursive;
 }
 
 *,
@@ -94,5 +95,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Kalam", cursive;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
 }

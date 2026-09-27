@@ -16,8 +16,8 @@
 }
 
 .faq-kicker {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
   margin-bottom: 1rem;
@@ -26,8 +26,8 @@
 }
 
 .faq-title {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 900;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   font-size: 3rem;
   margin: 0;
   line-height: 1.2;
@@ -55,9 +55,9 @@
 }
 
 .faq-question {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--fonte-titulos);
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0;
   color: #000000;
 }
