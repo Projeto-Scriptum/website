@@ -1,0 +1,240 @@
+.page-shell {
+  min-height: 70vh;
+  padding: 4rem 1.5rem 7rem;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-shell.gallery-page {
+  padding-inline: 0;
+}
+.gallery-page .page-container {
+  width: 100%;
+  padding-inline: 7.5rem;
+}
+.page-intro {
+  max-width: 760px;
+}
+.page-kicker {
+  font-family: var(--fonte-titulos);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+.page-intro h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.12;
+  margin: 0 0 1.5rem;
+}
+.page-intro > p:not(.page-kicker) {
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+.page-intro .action-link {
+  margin-top: 1.2rem;
+}
+.demo-note {
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--preto-scriptum);
+  background: white;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 2.5rem 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 12px;
+  gap: 20px;
+  align-items: stretch;
+}
+.art-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  border: 2px solid var(--preto-scriptum);
+  background: white;
+  box-shadow: 5px 5px 0 var(--preto-scriptum);
+  overflow: hidden;
+}
+.art-card--quadrado {
+  grid-row: span 16;
+}
+.art-card--vertical {
+  grid-row: span 20;
+}
+.art-card--horizontal {
+  grid-row: span 13;
+}
+.art-card > img {
+  display: block;
+  width: 100%;
+  height: 0;
+  flex: 1 1 0;
+  min-height: 0;
+  object-fit: contain;
+  background: #f4efe4;
+}
+.art-card figcaption {
+  padding: 1.1rem 1.25rem;
+  border-top: 2px solid var(--preto-scriptum);
+}
+.art-type {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.art-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+.art-author {
+  margin: 0;
+  font-size: 0.85rem;
+}
+.page-callout {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--amarelo-scriptum);
+  border: 2px solid var(--preto-scriptum);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.page-callout h2 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+.page-callout p {
+  margin: 0.75rem 0 0;
+  line-height: 1.6;
+}
+.page-callout .action-link {
+  flex-shrink: 0;
+}
+.volunteer-intro {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3rem;
+}
+.volunteer-note {
+  padding: 2rem;
+  border: 2px solid var(--preto-scriptum);
+  background: var(--amarelo-scriptum);
+  box-shadow: 7px 7px 0 var(--preto-scriptum);
+  transform: rotate(1deg);
+}
+.volunteer-note h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+.volunteer-note p:not(.page-kicker) {
+  line-height: 1.7;
+}
+.volunteer-areas {
+  margin-top: 5rem;
+}
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.25;
+  margin: 0;
+}
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.volunteer-card {
+  padding: 2rem;
+  border: 2px solid var(--preto-scriptum);
+  background: white;
+  box-shadow: 5px 5px 0 var(--preto-scriptum);
+}
+.volunteer-card:last-child {
+  grid-column: 1 / -1;
+}
+.role-number {
+  display: inline-block;
+  background: var(--preto-scriptum);
+  color: var(--amarelo-scriptum);
+  padding: 0.5rem 0.8rem;
+  font-weight: 800;
+}
+.volunteer-card h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin: 1rem 0 0.75rem;
+}
+.volunteer-card p {
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 1023px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .volunteer-intro {
+    grid-template-columns: 1fr;
+  }
+  .page-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-page .page-container {
+    padding-inline: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .page-shell {
+    padding: 2.5rem 1.25rem 6rem;
+  }
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+  }
+  .art-card {
+    grid-row: auto;
+  }
+  .art-card > img {
+    flex: none;
+    height: auto;
+  }
+  .art-card--quadrado > img {
+    aspect-ratio: 1;
+  }
+  .art-card--vertical > img {
+    aspect-ratio: 3 / 4;
+  }
+  .art-card--horizontal > img {
+    aspect-ratio: 8 / 5;
+  }
+  .volunteer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .volunteer-note {
+    transform: none;
+    padding: 1.5rem;
+  }
+  .page-callout,
+  .volunteer-card {
+    padding: 1.5rem;
+  }
+}

@@ -5,18 +5,46 @@ export default function Faq() {
   const faqData = [
     {
       pergunta: "Preciso ser artista ou escritor para participar?",
-      resposta:
-        "Não. As atividades valorizam o processo, não a técnica. Basta ter curiosidade, respeito e vontade de experimentar.",
+      resposta: (
+        <>
+          <p className="faq-answer">
+            <strong>Não</strong>, qualquer pessoa pode participar das ações do
+            projeto, tanto quem já possui contato com arte e escrita quanto quem
+            ainda está começando e quer ter mais contato com essas linguagens.
+          </p>
+          <p className="faq-answer">
+            <em>
+              <strong>As atividades valorizam o processo, e não a técnica.</strong>{" "}
+              Não é necessário “saber fazer” arte ou escrever bem para participar.
+            </em>
+          </p>
+        </>
+      ),
     },
     {
       pergunta: "Quem pode se voluntariar?",
-      resposta:
-        "Pessoas de diferentes idades e áreas de atuação. Destaque especial para o protagonismo juvenil (aberto para jovens e adolescentes).",
+      resposta: (
+        <p className="faq-answer">
+          Pessoas de diferentes idades, áreas e experiências que se identifiquem
+          com a nossa causa e queiram contribuir com o projeto. Vale destacar que
+          valorizamos o protagonismo juvenil (Voluntariado aberto para jovens e
+          adolescentes) e a construção coletiva.
+        </p>
+      ),
     },
     {
-      pergunta: "O projeto oferece atendimento psicológico?",
-      resposta:
-        "Não. O projeto não oferece atendimento psicológico nem atua como serviço de encaminhamento clínico. O objetivo é criar espaços de expressão e convivência através da arte e escrita.",
+      pergunta: "O Projeto Scriptum oferece atendimento psicológico?",
+      resposta: (
+        <p className="faq-answer">
+          Não. O projeto{" "}
+          <strong>
+            não oferece atendimento psicológico nem atuamos como serviço de
+            encaminhamento clínico
+          </strong>
+          . Nossa atuação é voltada para criar espaços de expressão, convivência
+          e participação por meio da arte e da escrita.
+        </p>
+      ),
     },
   ];
 
@@ -27,11 +55,10 @@ export default function Faq() {
   };
 
   return (
-    <section className="faq-section" id="duvidas">
+    <section className="faq-section" id="duvidas" tabIndex={-1}>
       <div className="faq-container">
         <div className="faq-header">
-          <p className="faq-kicker">PERGUNTAS FREQUENTES</p>
-          <h2 className="faq-title">Antes de começar, tire suas dúvidas.</h2>
+          <h2 className="faq-title">Perguntas frequentes</h2>
         </div>
 
         <div className="faq-list">
@@ -43,6 +70,8 @@ export default function Faq() {
                   className="faq-question-row"
                   onClick={() => toggleItem(index)}
                   role="button"
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-resposta-${index}`}
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -60,8 +89,12 @@ export default function Faq() {
                     +
                   </button>
                 </div>
-                <div className={`faq-answer-wrapper ${isOpen ? "open" : ""}`}>
-                  <p className="faq-answer">{item.resposta}</p>
+                <div
+                  id={`faq-resposta-${index}`}
+                  className={`faq-answer-wrapper ${isOpen ? "open" : ""}`}
+                  aria-hidden={!isOpen}
+                >
+                  <div className="faq-answer-content">{item.resposta}</div>
                 </div>
               </div>
             );

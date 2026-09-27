@@ -5,6 +5,7 @@
   --fundo-pastel: #fdfbf7;
   --texto-escuro: #333333;
   --preto-scriptum: #121214;
+  --fonte-titulos: "Kalam", cursive;
 }
 
 *,
@@ -21,11 +22,79 @@ body {
   overflow-x: hidden;
 }
 
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border: 2px solid var(--preto-scriptum);
+  background: white;
+  color: var(--preto-scriptum);
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 4px 4px 0 var(--preto-scriptum);
+  transition:
+    transform 0.16s,
+    box-shadow 0.16s;
+}
+.action-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--preto-scriptum);
+}
+:focus-visible {
+  outline: 3px solid var(--preto-scriptum);
+  outline-offset: 4px;
+}
+.card-dark :focus-visible {
+  outline-color: var(--amarelo-scriptum);
+}
+main:focus,
+section[tabindex="-1"]:focus,
+#inicio:focus {
+  outline: none;
+}
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 1rem;
+  background: white;
+  color: var(--preto-scriptum);
+  border: 2px solid var(--preto-scriptum);
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Kalam", cursive;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
 }

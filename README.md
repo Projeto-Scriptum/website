@@ -1,5 +1,19 @@
 # 🌻 Projeto Scriptum - Website Oficial
 
+## Páginas e hospedagem
+
+O site tem três rotas: `/` (início), `/galeria` e `/voluntariado`. Os links de Sobre, Atividades e Dúvidas levam às seções da página inicial, inclusive quando acessados de outra página.
+
+A hospedagem deve servir `index.html` para caminhos da aplicação que não correspondam a arquivos estáticos. Essa configuração de fallback é necessária para abrir ou atualizar diretamente `/galeria` e `/voluntariado` com o `BrowserRouter`. Arquivos de imagem, CSS e JavaScript devem continuar sendo servidos normalmente. O Vite já permite verificar essas rotas localmente com `npm run dev` ou `npm run preview`.
+
+### Conteúdo provisório
+
+As quatro atividades da issue #20 usam ilustrações locais, identificadas nas legendas. **A exigência de fotos reais de atividades realizadas permanece pendente**: substituir as ilustrações por registros autorizados e atualizar os textos alternativos e as legendas antes de considerar a issue integralmente concluída. Não há números de impacto ou relatos inventados.
+
+A galeria usa oito obras demonstrativas em `src/data/artesData.ts`, com autorias explicitamente fictícias. As imagens SVG locais foram criadas para demonstrar o mosaico; não são obras de participantes. Para incluir o acervo real, substituir os dados e os arquivos por materiais autorizados, mantendo os campos `id`, `titulo`, `tipo`, `autor`, `img`, `alt` e `formato`, e remover o aviso de demonstração somente após essa substituição.
+
+A inscrição para voluntariado usa o formulário externo indicado no documento de sugestões. O site não recebe inscrições nem armazena dados pessoais.
+
 Bem-vindo(a) ao repositório público do **Projeto Scriptum**! 
 
 Este projeto foi construído colaborativamente por uma equipe de voluntários, muitos dos quais estão aprendendo a programar do zero. Nosso objetivo é mobilizar pessoas para criarem espaços de expressão, pertencimento e cuidado com a saúde mental através da arte e da escrita, com foco principal em jovens e adolescentes.
