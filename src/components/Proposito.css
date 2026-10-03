@@ -95,8 +95,8 @@
 }
 
 .proposito-title {
-  font-family: "Open Sans Variable", "Open Sans", sans-serif;
-  font-weight: 800;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   line-height: 1.15;
   color: #000000;
