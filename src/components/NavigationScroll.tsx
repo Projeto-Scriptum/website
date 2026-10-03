@@ -15,6 +15,13 @@ export default function NavigationScroll() {
   }, []);
 
   useLayoutEffect(() => {
+    const titles: Record<string, string> = {
+      "/": "Projeto Scriptum | Arte, escrita e comunidade",
+      "/galeria": "Galeria | Projeto Scriptum",
+      "/voluntariado": "Voluntariado | Projeto Scriptum",
+    };
+    document.title = titles[location.pathname] ?? "Página não encontrada | Projeto Scriptum";
+
     let restored = false;
     const frame = window.requestAnimationFrame(() => {
       restored = true;

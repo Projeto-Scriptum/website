@@ -1,5 +1,6 @@
 import "./Hero.css";
 import logo from "../assets/hero.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -15,10 +16,18 @@ export default function Hero() {
             expressão, pertencimento e cuidado com a saúde mental através da
             arte e da escrita, com foco principal em jovens e adolescentes.
           </p>
+          <div className="hero-actions">
+            <Link className="action-link hero-action-primary" to="/voluntariado">
+              Quero participar <span aria-hidden="true">↗</span>
+            </Link>
+            <Link className="hero-action-secondary" to="/#atividades">
+              Conhecer as atividades <span aria-hidden="true">↓</span>
+            </Link>
+          </div>
         </div>
 
         <div className="hero-right">
-          <img src={logo} alt="Imagem de materiais artísticos" />
+          <img src={logo} alt="Caderno aberto e lápis sobre um fundo amarelo" width="500" height="750" fetchPriority="high" />
         </div>
       </section>
     </>

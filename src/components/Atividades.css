@@ -5,10 +5,10 @@
 }
 
 .atividades-container {
-  max-width: 1200px;
+  max-width: var(--largura-conteudo);
   margin: 0 auto;
   width: 100%;
-  padding-inline: 7.5rem;
+  padding-inline: var(--margem-conteudo);
 }
 
 .atividades-header-row {
@@ -51,7 +51,7 @@
 }
 
 .atividades-intro {
-  font-family: "Open Sans", sans-serif;
+  font-family: inherit;
   font-size: 1.15rem;
   font-weight: 400;
   color: #000000;
@@ -84,7 +84,7 @@
     padding: 3rem 0 4rem;
   }
   .atividades-container {
-    padding-inline: 2.5rem;
+    padding-inline: var(--margem-conteudo);
   }
   .atividades-header-row {
     flex-direction: column;

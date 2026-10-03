@@ -51,14 +51,14 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((current) => current === index ? null : index);
   };
 
   return (
-    <section className="faq-section" id="duvidas" tabIndex={-1}>
+    <section className="faq-section" id="duvidas" tabIndex={-1} aria-labelledby="duvidas-titulo">
       <div className="faq-container">
         <div className="faq-header">
-          <h2 className="faq-title">Perguntas frequentes</h2>
+          <h2 className="faq-title" id="duvidas-titulo">Perguntas frequentes</h2>
         </div>
 
         <div className="faq-list">
@@ -66,33 +66,25 @@ export default function Faq() {
             const isOpen = openIndex === index;
             return (
               <div className={`faq-item ${isOpen ? "open" : ""}`} key={index}>
-                <div
-                  className="faq-question-row"
-                  onClick={() => toggleItem(index)}
-                  role="button"
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-resposta-${index}`}
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      toggleItem(index);
-                    }
-                  }}
-                >
-                  <h3 className="faq-question">{item.pergunta}</h3>
+                <h3 className="faq-question">
                   <button
-                    className={`faq-toggle-btn ${isOpen ? "rotated" : ""}`}
-                    tabIndex={-1}
-                    aria-hidden="true"
+                    type="button"
+                    id={`faq-pergunta-${index}`}
+                    className="faq-question-row"
+                    onClick={() => toggleItem(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-resposta-${index}`}
                   >
-                    +
+                    <span>{item.pergunta}</span>
+                    <span className={`faq-toggle-btn ${isOpen ? "rotated" : ""}`} aria-hidden="true">+</span>
                   </button>
-                </div>
+                </h3>
                 <div
                   id={`faq-resposta-${index}`}
-                  className={`faq-answer-wrapper ${isOpen ? "open" : ""}`}
-                  aria-hidden={!isOpen}
+                  className="faq-answer-wrapper"
+                  role="region"
+                  aria-labelledby={`faq-pergunta-${index}`}
+                  hidden={!isOpen}
                 >
                   <div className="faq-answer-content">{item.resposta}</div>
                 </div>

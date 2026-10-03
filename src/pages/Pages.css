@@ -1,17 +1,18 @@
 .page-shell {
   min-height: 70vh;
-  padding: 4rem 1.5rem 7rem;
+  padding: 4rem 0 5rem;
 }
 .page-container {
-  max-width: 1200px;
+  max-width: var(--largura-conteudo);
   margin: 0 auto;
+  padding-inline: var(--margem-conteudo);
 }
 .page-shell.gallery-page {
   padding-inline: 0;
 }
 .gallery-page .page-container {
   width: 100%;
-  padding-inline: 7.5rem;
+  padding-inline: var(--margem-conteudo);
 }
 .page-intro {
   max-width: 760px;
@@ -198,12 +199,12 @@
 }
 @media (max-width: 768px) {
   .gallery-page .page-container {
-    padding-inline: 2.5rem;
+    padding-inline: var(--margem-conteudo);
   }
 }
 @media (max-width: 600px) {
   .page-shell {
-    padding: 2.5rem 1.25rem 6rem;
+    padding: 2.5rem 0 4rem;
   }
   .gallery-grid {
     grid-template-columns: minmax(0, 1fr);

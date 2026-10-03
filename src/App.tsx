@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import BotaoAjuda from "./components/BotaoAjuda";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import NavigationScroll from "./components/NavigationScroll";
 import Home from "./pages/Home";
 import Galeria from "./pages/Galeria";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/voluntariado" element={<Voluntariado />} />
         <Route path="*" element={<NaoEncontrada />} />
       </Routes>
+      <Footer />
       <BotaoAjuda />
     </>
   );

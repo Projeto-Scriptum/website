@@ -1,6 +1,6 @@
 .proposito-section {
   background-color: var(--fundo-pastel, #fdfbf7);
-  padding: 0 2rem 5rem;
+  padding: 0 var(--margem-conteudo) 5rem;
   border-bottom: 3px solid #000000;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 .proposito-container {
-  max-width: 1200px;
+  max-width: calc(var(--largura-conteudo) - 2 * var(--margem-conteudo));
   width: 100%;
   margin: 0 auto;
   display: grid;
@@ -95,7 +95,7 @@
 }
 
 .proposito-title {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans Variable", "Open Sans", sans-serif;
   font-weight: 800;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   line-height: 1.15;
@@ -162,7 +162,7 @@
 
 @media (max-width: 900px) {
   .proposito-section {
-    padding: 0 1.5rem 4rem;
+    padding: 0 var(--margem-conteudo) 4rem;
   }
 
   .proposito-container {

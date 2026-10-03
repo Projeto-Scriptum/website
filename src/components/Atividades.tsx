@@ -70,7 +70,7 @@ export default function Atividades() {
           <div className="atividades-intro-col">
             <p className="atividades-intro">
               Atividades acessíveis, construídas para acolher
-              <br />
+              {" "}
               diferentes histórias e formas de expressão.
             </p>
           </div>
