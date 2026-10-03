@@ -6,8 +6,6 @@ export default function Hero() {
     <>
       <section
         className="hero-container"
-        id="sobre"
-        tabIndex={-1}
         aria-label="Sobre o Projeto Scriptum"
       >
         <div className="hero-left">
