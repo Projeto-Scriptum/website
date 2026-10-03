@@ -1,6 +1,6 @@
 .atividades-section {
   background-color: var(--amarelo-scriptum, #fdf800);
-  padding: 5rem 2rem 6rem 2rem;
+  padding: 5rem 0 6rem;
   border-bottom: 3px solid #000000;
 }
 
@@ -8,6 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding-inline: 7.5rem;
 }
 
 .atividades-header-row {
@@ -19,18 +20,20 @@
 }
 
 .atividades-title-col {
-  flex: 0 0 auto;
+  flex: 1 1 55%;
+  min-width: 0;
 }
 
 .atividades-intro-col {
-  flex: 0 0 auto;
+  flex: 1 1 35%;
+  min-width: 0;
   border-left: 4px solid #000000;
   padding-left: 2rem;
 }
 
 .atividades-kicker {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 1px;
@@ -39,8 +42,8 @@
 }
 
 .atividades-title {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 900;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
   font-size: 3rem;
   margin: 0;
   line-height: 1.2;
@@ -58,13 +61,30 @@
 
 .atividades-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
+}
+
+.atividades-next {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.atividades-next p {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .atividades-section {
-    padding: 3rem 1.5rem 4rem 1.5rem;
+    padding: 3rem 0 4rem;
+  }
+  .atividades-container {
+    padding-inline: 2.5rem;
   }
   .atividades-header-row {
     flex-direction: column;
