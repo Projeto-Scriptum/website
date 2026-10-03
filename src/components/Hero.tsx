@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-right">
-          <img src={logo} alt="Caderno aberto e lápis sobre um fundo amarelo" width="500" height="750" fetchPriority="high" />
+          <img src={logo} alt="Caderno aberto e lápis sobre um fundo amarelo" width="500" height="750" fetchPriority="high" decoding="async" />
         </div>
       </section>
     </>
