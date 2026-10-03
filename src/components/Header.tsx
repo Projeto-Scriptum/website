@@ -20,7 +20,7 @@ export default function Header() {
       <div className="header-container">
         <div className="logo">
           <Link to="/#inicio" aria-label="Projeto Scriptum, início">
-            <img src={logoScriptum} alt="Projeto Scriptum" className="logo-img" />
+            <img src={logoScriptum} alt="Projeto Scriptum" className="logo-img" decoding="async" />
           </Link>
         </div>
 

@@ -23,6 +23,7 @@ export default function Card({
             src={imagem.src}
             alt={imagem.alt}
             loading="lazy"
+            decoding="async"
             width="800"
             height="500"
           />

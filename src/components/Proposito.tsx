@@ -1,9 +1,7 @@
 import "./Proposito.css";
-import { useState } from "react";
 import materiais from "../assets/ilustracoes/materiais.svg";
 
 export default function Proposito() {
-  const [fotoIndisponivel, setFotoIndisponivel] = useState(false);
   const pilaresData = [
     { numero: "01", label: "Arte", variante: "card-yellow" },
     { numero: "02", label: "Escrita", variante: "card-white" },
@@ -22,20 +20,16 @@ export default function Proposito() {
           <div className="proposito-frame" aria-hidden="true"></div>
           <figure className="proposito-image">
             <img
-              src={fotoIndisponivel
-                ? materiais
-                : "https://images.pexels.com/photos/8107772/pexels-photo-8107772.jpeg?auto=compress&cs=tinysrgb&w=960"}
-              alt={fotoIndisponivel
-                ? "Ilustração de tintas, lápis e papéis para criação artística"
-                : "Jovens desenhando e escrevendo juntos"}
+              src={materiais}
+              alt="Ilustração de tintas, lápis e papéis para criação artística"
               loading="lazy"
-              width="960"
-              height="960"
-              onError={() => setFotoIndisponivel(true)}
+              decoding="async"
+              width="800"
+              height="500"
             />
             <figcaption className="proposito-image-tag">
               Expressão sem julgamento
-              <span>{fotoIndisponivel ? "Ilustração" : "Foto ilustrativa"}</span>
+              <span>Ilustração</span>
             </figcaption>
           </figure>
         </div>
