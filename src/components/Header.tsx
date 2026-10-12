@@ -1,18 +1,46 @@
 import "./Header.css";
 import logoScriptum from "/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { useRef, useState } from "react";
 
 export default function Header() {
+  const [menuAberto, setMenuAberto] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+
   return (
-    <header className="header">
+    <header
+      className="header"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && menuAberto) {
+          setMenuAberto(false);
+          menuButton.current?.focus();
+        }
+      }}
+    >
       <div className="header-container">
         <div className="logo">
           <Link to="/#inicio" aria-label="Projeto Scriptum, início">
-            <img src={logoScriptum} alt="Projeto Scriptum" className="logo-img" />
+            <img src={logoScriptum} alt="Projeto Scriptum" className="logo-img" decoding="async" />
           </Link>
         </div>
 
-        <nav aria-label="Navegação principal">
+        <button
+          ref={menuButton}
+          type="button"
+          className="menu-toggle"
+          aria-expanded={menuAberto}
+          aria-controls="navegacao-principal"
+          onClick={() => setMenuAberto(!menuAberto)}
+        >
+          {menuAberto ? "Fechar" : "Menu"}
+          <span aria-hidden="true">{menuAberto ? "×" : "☰"}</span>
+        </button>
+        <nav
+          id="navegacao-principal"
+          className={menuAberto ? "nav-open" : undefined}
+          aria-label="Navegação principal"
+          onClick={() => setMenuAberto(false)}
+        >
           <ul className="nav-list">
             <li>
               <Link to="/#sobre" className="nav-link">

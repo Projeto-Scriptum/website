@@ -28,6 +28,7 @@ export default function Galeria() {
                 src={arte.img}
                 alt={arte.alt}
                 loading="lazy"
+                decoding="async"
                 width={arte.formato === "horizontal" ? 800 : 600}
                 height={
                   arte.formato === "vertical"

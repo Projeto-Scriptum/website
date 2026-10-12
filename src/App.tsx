@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import BotaoAjuda from "./components/BotaoAjuda";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import NavigationScroll from "./components/NavigationScroll";
 import Disclaimer from "./components/Disclaimer";
 import Home from "./pages/Home";
@@ -23,6 +24,7 @@ function App() {
         <Route path="*" element={<NaoEncontrada />} />
       </Routes>
       <Disclaimer />
+      <Footer />
       <BotaoAjuda />
     </>
   );
