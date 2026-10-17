@@ -3,6 +3,7 @@ import Manifesto from "../components/Manifesto";
 import Atividades from "../components/Atividades";
 import Faq from "../components/Faq";
 import Proposito from "../components/Proposito";
+import Disclaimer from "../components/Disclaimer";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <Manifesto />
       <Proposito />
       <Atividades />
+      <Disclaimer />
+
       <Faq />
     </main>
   );

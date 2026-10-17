@@ -23,7 +23,6 @@ function App() {
         <Route path="/voluntariado" element={<Voluntariado />} />
         <Route path="*" element={<NaoEncontrada />} />
       </Routes>
-      <Disclaimer />
       <Footer />
       <BotaoAjuda />
     </>
