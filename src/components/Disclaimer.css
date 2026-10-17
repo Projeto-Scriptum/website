@@ -4,9 +4,10 @@
 }
 
 .disclaimer-container {
-  max-width: 1200px;
+  max-width: var(--largura-conteudo);
+  width: 100%;
   margin: 0 auto;
-  padding-inline: 1.5rem; 
+  padding-inline: var(--margem-conteudo);
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -16,6 +17,13 @@
   flex-shrink: 0;
   width: 66px;
   height: 66px;
+  color: var(--amarelo-scriptum);
+}
+
+.disclaimer-content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
 }
 
 .disclaimer-title {
@@ -27,7 +35,6 @@
 
 .disclaimer-text {
   margin: 0;
-  max-width: 75ch;
   line-height: 1.6;
   color: #fff;
 }
