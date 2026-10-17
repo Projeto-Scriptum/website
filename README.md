@@ -8,6 +8,10 @@ A hospedagem deve servir `index.html` para caminhos da aplicação que não corr
 
 ### Conteúdo provisório
 
+Os contatos da seção “Entre em contato conosco”, no Hero, ficam em `src/data/contatos.ts`: URL do Instagram oficial (`instagramUrl`), número do WhatsApp com código do país e DDD (`whatsappNumero`) e e-mail do acolhimento (`emailAcolhimento`). O WhatsApp abre uma conversa com a mensagem “Olá, gostaria de conhecer mais sobre o projeto. Poderia me ajudar?”, sem enviar automaticamente. O e-mail usa `mailto:`. Os ícones são rosa para Instagram, verde para WhatsApp e azul para e-mail.
+
+Enquanto um campo estiver vazio, seu canal aparece sem link e não recebe foco pelo teclado, evitando redirecionamentos para contatos não confirmados.
+
 As quatro atividades da issue #20 usam ilustrações locais, identificadas nas legendas. **A exigência de fotos reais de atividades realizadas permanece pendente**: substituir as ilustrações por registros autorizados e atualizar os textos alternativos e as legendas antes de considerar a issue integralmente concluída. Não há números de impacto ou relatos inventados.
 
 A galeria usa oito obras demonstrativas em `src/data/artesData.ts`, com autorias explicitamente fictícias. As imagens SVG locais foram criadas para demonstrar o mosaico; não são obras de participantes. Para incluir o acervo real, substituir os dados e os arquivos por materiais autorizados, mantendo os campos `id`, `titulo`, `tipo`, `autor`, `img`, `alt` e `formato`, e remover o aviso de demonstração somente após essa substituição.

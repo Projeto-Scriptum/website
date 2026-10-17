@@ -1,6 +1,7 @@
 import "./Hero.css";
 import logo from "../assets/hero.png";
 import { Link } from "react-router-dom";
+import RedesSociais from "./RedesSociais";
 
 export default function Hero() {
   return (
@@ -20,10 +21,8 @@ export default function Hero() {
             <Link className="action-link hero-action-primary" to="/voluntariado">
               Quero participar <span aria-hidden="true">↗</span>
             </Link>
-            <Link className="hero-action-secondary" to="/#atividades">
-              Conhecer as atividades <span aria-hidden="true">↓</span>
-            </Link>
           </div>
+          <RedesSociais />
         </div>
 
         <div className="hero-right">

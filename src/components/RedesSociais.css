@@ -1,0 +1,52 @@
+.hero-redes {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--preto-scriptum);
+}
+
+.hero-redes h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--preto-scriptum);
+}
+
+.hero-redes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-redes-lista li {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-rede-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  color: var(--preto-scriptum);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+  overflow-wrap: anywhere;
+}
+
+.hero-rede-link img {
+  flex-shrink: 0;
+}
+
+a.hero-rede-link:hover {
+  text-decoration: underline;
+}
+
+.hero-rede-link[aria-disabled="true"] {
+  color: var(--texto-escuro);
+}

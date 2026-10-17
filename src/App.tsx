@@ -3,7 +3,6 @@ import BotaoAjuda from "./components/BotaoAjuda";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NavigationScroll from "./components/NavigationScroll";
-import Disclaimer from "./components/Disclaimer";
 import Home from "./pages/Home";
 import Galeria from "./pages/Galeria";
 import Voluntariado from "./pages/Voluntariado";
