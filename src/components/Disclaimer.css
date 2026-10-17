@@ -1,0 +1,46 @@
+.disclaimer {
+  background: var(--preto-scriptum);
+  padding: 2rem 0;
+}
+
+.disclaimer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1.5rem; 
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  width: 66px;
+  height: 66px;
+}
+
+.disclaimer-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--amarelo-scriptum);
+}
+
+.disclaimer-text {
+  margin: 0;
+  max-width: 75ch;
+  line-height: 1.6;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .disclaimer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .disclaimer-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
