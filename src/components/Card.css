@@ -17,7 +17,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 8 / 5;
-  object-fit: cover;
+  object-fit: contain;
   border: 2px solid var(--preto-scriptum);
   background: var(--fundo-pastel);
 }

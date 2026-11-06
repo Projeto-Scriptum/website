@@ -1,5 +1,6 @@
 import "./Proposito.css";
-import materiais from "../assets/ilustracoes/materiais.svg";
+import rodaInterna from "../assets/fotos/roda-conversa-interna-setembro-2026.jpeg";
+import ImagemAdiada from "./ImagemAdiada";
 
 export default function Proposito() {
   const pilaresData = [
@@ -19,17 +20,15 @@ export default function Proposito() {
         <div className="proposito-image-wrapper">
           <div className="proposito-frame" aria-hidden="true"></div>
           <figure className="proposito-image">
-            <img
-              src={materiais}
-              alt="Ilustração de tintas, lápis e papéis para criação artística"
-              loading="lazy"
-              decoding="async"
-              width="800"
-              height="500"
+            <ImagemAdiada
+              src={rodaInterna}
+              alt="Montagem de participantes de uma roda de conversa online do Projeto Scriptum"
+              width="720"
+              height="683"
             />
             <figcaption className="proposito-image-tag">
               Expressão sem julgamento
-              <span>Ilustração</span>
+              <span>Roda interna • setembro de 2026</span>
             </figcaption>
           </figure>
         </div>

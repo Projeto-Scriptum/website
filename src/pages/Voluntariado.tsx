@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import ImagemAdiada from "../components/ImagemAdiada";
+import equipe from "../assets/fotos/encontro-equipe-scriptum-2026.jpeg";
 import "./Pages.css";
 
 const areas = [
@@ -66,6 +68,15 @@ export default function Voluntariado() {
             </p>
           </aside>
         </div>
+        <figure className="volunteer-image">
+          <ImagemAdiada
+            src={equipe}
+            alt="Integrantes da equipe do Projeto Scriptum em uma reunião online"
+            width="1600"
+            height="720"
+          />
+          <figcaption>Encontro online da equipe do Projeto Scriptum.</figcaption>
+        </figure>
         <section className="volunteer-areas" aria-labelledby="areas-titulo">
           <div className="section-heading">
             <p className="page-kicker">Encontre sua forma de contribuir</p>

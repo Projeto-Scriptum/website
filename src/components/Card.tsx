@@ -1,11 +1,18 @@
 import "./Card.css";
+import ImagemAdiada from "./ImagemAdiada";
 
 interface CardProps {
   kicker?: string;
   titulo: string;
   texto: string;
   isDark?: boolean;
-  imagem?: { src: string; alt: string; legenda?: string };
+  imagem?: {
+    src: string;
+    alt: string;
+    legenda?: string;
+    width?: number;
+    height?: number;
+  };
 }
 
 export default function Card({
@@ -19,13 +26,11 @@ export default function Card({
     <article className={`card ${isDark ? "card-dark" : "card-light"}`}>
       {imagem ? (
         <figure className="card-imagem">
-          <img
+          <ImagemAdiada
             src={imagem.src}
             alt={imagem.alt}
-            loading="lazy"
-            decoding="async"
-            width="800"
-            height="500"
+            width={imagem.width ?? 800}
+            height={imagem.height ?? 500}
           />
           {imagem.legenda && <figcaption>{imagem.legenda}</figcaption>}
         </figure>

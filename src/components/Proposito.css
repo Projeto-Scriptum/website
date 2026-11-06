@@ -49,7 +49,6 @@
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  filter: grayscale(100%);
 }
 
 .proposito-image-tag {
