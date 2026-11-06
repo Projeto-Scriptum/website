@@ -12,7 +12,9 @@ Os contatos da seção “Entre em contato conosco”, no Hero, ficam em `src/da
 
 Enquanto um campo estiver vazio, seu canal aparece sem link e não recebe foco pelo teclado, evitando redirecionamentos para contatos não confirmados.
 
-As quatro atividades da issue #20 usam ilustrações locais, identificadas nas legendas. **A exigência de fotos reais de atividades realizadas permanece pendente**: substituir as ilustrações por registros autorizados e atualizar os textos alternativos e as legendas antes de considerar a issue integralmente concluída. Não há números de impacto ou relatos inventados.
+Propósito, Amigo Scriptum, Roda de conversa e Oficinas, Desafio Scriptum e Voluntariado usam os registros selecionados em `src/assets/fotos`, com textos alternativos e legendas de cada atividade. **A foto da Campanha Acolher para Conhecer permanece pendente**: o card mantém uma ilustração identificada na legenda, pois não há registro da campanha no acervo analisado. A seleção e os caminhos de origem estão em `docs/curadoria-fotos-secoes.md`.
+
+As novas fotos usam `ImagemAdiada`: a estrutura do React é montada com o espaço da imagem reservado e sem `src`. O componente aguarda o evento `load` e, nos navegadores com Paint Timing, a primeira pintura de conteúdo. Depois de dois `requestAnimationFrame`, atribui a URL e permite ao navegador carregar a imagem sob demanda (`loading="lazy"`), com decodificação assíncrona (`decoding="async"`). Em navegações internas, quando o documento já terminou de carregar, aplica os dois quadros antes de liberar a imagem. O logo e a imagem principal do Hero mantêm suas prioridades de carregamento.
 
 A galeria usa oito obras demonstrativas em `src/data/artesData.ts`, com autorias explicitamente fictícias. As imagens SVG locais foram criadas para demonstrar o mosaico; não são obras de participantes. Para incluir o acervo real, substituir os dados e os arquivos por materiais autorizados, mantendo os campos `id`, `titulo`, `tipo`, `autor`, `img`, `alt` e `formato`, e remover o aviso de demonstração somente após essa substituição.
 

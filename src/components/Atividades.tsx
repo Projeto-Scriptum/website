@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import materiais from "../assets/ilustracoes/materiais.svg";
 import pincel from "../assets/ilustracoes/pincel.svg";
-import cartas from "../assets/ilustracoes/cartas.svg";
-import caderno from "../assets/ilustracoes/caderno.svg";
+import amigoScriptum from "../assets/fotos/amigo-scriptum-cartas-afetos-2026.png";
+import oficina from "../assets/fotos/oficina-quem-sou-eu-depois-da-escola-2026.jpeg";
+import desafio from "../assets/fotos/desafio-onde-a-arte-mora-2026.png";
 import "./Atividades.css";
 
 export default function Atividades() {
@@ -14,8 +14,11 @@ export default function Atividades() {
         "Um convite à troca e à construção de vínculos por meio da arte, da escrita e da presença.",
       isDark: false,
       imagem: {
-        src: cartas,
-        alt: "Ilustração de cartas e envelopes sobre uma mesa",
+        src: amigoScriptum,
+        alt: "Mosaico de cartas, desenhos, pinturas e colagens do Amigo Scriptum",
+        legenda: "Amigo Scriptum • Entre Cartas e Afetos • setembro de 2026",
+        width: 763,
+        height: 554,
       },
     },
     {
@@ -24,8 +27,11 @@ export default function Atividades() {
         "Espaços de conversa e experimentação artística para compartilhar ideias e explorar diferentes formas de expressão.",
       isDark: true,
       imagem: {
-        src: materiais,
-        alt: "Ilustração de tintas, lápis e papéis para uma oficina criativa",
+        src: oficina,
+        alt: "Participantes em uma chamada online da oficina Quem Sou Eu Depois da Escola",
+        legenda: "Oficina Quem Sou Eu Depois da Escola • maio de 2026",
+        width: 1600,
+        height: 1112,
       },
     },
     {
@@ -36,6 +42,7 @@ export default function Atividades() {
       imagem: {
         src: pincel,
         alt: "Ilustração de um pincel e marcas de tinta em papel",
+        legenda: "Imagem ilustrativa • registro provisório",
       },
     },
     {
@@ -44,8 +51,11 @@ export default function Atividades() {
         "Propostas criativas para experimentar a arte e a escrita no cotidiano, valorizando o processo de cada pessoa.",
       isDark: true,
       imagem: {
-        src: caderno,
-        alt: "Ilustração de um caderno aberto com um lápis",
+        src: desafio,
+        alt: "Mosaico de produções reunidas no desafio Onde a Arte Mora",
+        legenda: "Registro do acervo • desafio Onde a Arte Mora",
+        width: 1629,
+        height: 759,
       },
     },
   ];
@@ -83,10 +93,7 @@ export default function Atividades() {
               titulo={atividade.titulo}
               texto={atividade.texto}
               isDark={atividade.isDark}
-              imagem={{
-                ...atividade.imagem,
-                legenda: "Imagem ilustrativa • registro provisório",
-              }}
+              imagem={atividade.imagem}
             />
           ))}
         </div>
