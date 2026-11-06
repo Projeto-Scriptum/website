@@ -6,9 +6,27 @@ export default function Galeria() {
   return (
     <main id="conteudo" tabIndex={-1} className="page-shell gallery-page">
       <div className="page-container">
-        <header className="page-intro">
+        <header className="page-intro gallery-intro">
+          <div className="gallery-title-decoration">
+            <img
+              src="/src/assets/rabiscos/estrela.png"
+              alt=""
+              className="gallery-star"
+            />
+
+            <img
+              src="/src/assets/rabiscos/coracao.png"
+              alt=""
+              className="gallery-heart"
+            />
+          </div>
+
           <p className="page-kicker">Galeria Scriptum</p>
-          <h1>Há muitas formas de se expressar.</h1>
+
+          <h1>
+            Há muitas formas de se expressar.
+          </h1>
+
           <p>
             Desenhos, pinturas e colagens: um espaço para descobrir diferentes
             olhares e possibilidades de criação.

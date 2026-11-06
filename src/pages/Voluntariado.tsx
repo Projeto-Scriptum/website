@@ -36,7 +36,16 @@ export default function Voluntariado() {
         <div className="volunteer-intro">
           <header className="page-intro">
             <p className="page-kicker">Construir em comunidade</p>
-            <h1>Seja um Scriptumer.</h1>
+            <div className="volunteer-title">
+              <h1>
+                Seja um Scriptumer.
+                <img
+                  src="/src/assets/rabiscos/caderno.png"
+                  alt=""
+                  className="volunteer-notebook"
+                />
+              </h1>
+            </div>
             <p>
               Você pode fazer a diferença na vida de outras pessoas. Junte-se a
               uma comunidade que cria espaços de expressão e pertencimento por
@@ -70,7 +79,31 @@ export default function Voluntariado() {
           <div className="section-heading">
             <p className="page-kicker">Encontre sua forma de contribuir</p>
             <h2 id="areas-titulo">Diferentes talentos. Uma causa em comum.</h2>
+            <div className="areas-orbit" aria-hidden="true">
+              <svg viewBox="0 0 220 220">
+                <defs>
+                  <path
+                    id="areas-circle"
+                    d="M 110,110 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"
+                  />
+                </defs>
+
+                <text>
+                  <textPath
+                    href="#areas-circle"
+                    startOffset="50%"
+                    textAnchor="middle"
+                    textLength="510"
+                    lengthAdjust="spacing"
+                  >
+                    ACOLHIMENTO ✳ MÍDIAS ✳ ADMINISTRATIVO ✳ PARCERIAS ✳
+                    TECNOLOGIA ✳
+                  </textPath>
+                </text>
+              </svg>
+            </div>
           </div>
+
           <div className="volunteer-grid">
             {areas.map((area, index) => (
               <article className="volunteer-card" key={area.titulo}>

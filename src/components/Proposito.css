@@ -188,3 +188,22 @@
     right: 0;
   }
 }
+
+.proposito-pilar {
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+  cursor: default;
+}
+
+.proposito-pilar:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 4px 0 var(--preto-scriptum);
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .proposito-pilar {
+    transition: none;
+  }
+}
