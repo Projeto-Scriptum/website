@@ -23,7 +23,6 @@ const rabiscos = Object.entries(arquivosRabiscos)
 export default function Manifesto() {
   const faixaRef = useRef<HTMLDivElement>(null);
   const grupoRef = useRef<HTMLDivElement>(null);
-  const pausadoRef = useRef(false);
 
   const grupos = [0, 1, 2];
 
@@ -54,7 +53,7 @@ export default function Manifesto() {
       const delta = Math.min((agora - ultimoTempo) / 1000, 0.1);
       ultimoTempo = agora;
 
-      if (!pausadoRef.current && larguraGrupo > 0) {
+      if (larguraGrupo > 0) {
         posicao += VELOCIDADE * delta;
 
         if (posicao >= larguraGrupo) {
@@ -84,12 +83,6 @@ export default function Manifesto() {
       <div
         className="manifesto-faixa"
         ref={faixaRef}
-        onMouseEnter={() => {
-          pausadoRef.current = true;
-        }}
-        onMouseLeave={() => {
-          pausadoRef.current = false;
-        }}
       >
         <div className="manifesto-trilho">
           {grupos.map((grupo, index) => (

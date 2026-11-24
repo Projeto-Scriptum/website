@@ -2,6 +2,8 @@ import "./Hero.css";
 import logo from "../assets/hero.png";
 import { Link } from "react-router-dom";
 import RedesSociais from "./RedesSociais";
+import estrela from "../assets/rabiscos/estrela_brilho.png";
+import flor from "../assets/rabiscos/flor.png";
 
 export default function Hero() {
   return (
@@ -23,6 +25,11 @@ export default function Hero() {
             </Link>
           </div>
           <RedesSociais />
+        </div>
+
+        <div className="hero-decoration" aria-hidden="true">
+          <img src={estrela} alt="" className="hero-star" />
+          <img src={flor} alt="" className="hero-flower" />
         </div>
 
         <div className="hero-right">

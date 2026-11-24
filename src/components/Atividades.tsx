@@ -4,6 +4,7 @@ import materiais from "../assets/ilustracoes/materiais.svg";
 import pincel from "../assets/ilustracoes/pincel.svg";
 import cartas from "../assets/ilustracoes/cartas.svg";
 import caderno from "../assets/ilustracoes/caderno.svg";
+import espiral from "../assets/rabiscos/espiral.png";
 import "./Atividades.css";
 
 export default function Atividades() {
@@ -66,6 +67,12 @@ export default function Atividades() {
               <br />
               ferramenta de cuidado.
             </h2>
+            <img
+              src={espiral}
+              alt=""
+              className="atividades-decoration"
+              aria-hidden="true"
+            />
           </div>
           <div className="atividades-intro-col">
             <p className="atividades-intro">
