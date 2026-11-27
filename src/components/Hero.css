@@ -1,6 +1,8 @@
+
 .hero-container {
   max-width: var(--largura-conteudo);
   margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
   gap: clamp(2rem, 5vw, 4rem);
@@ -23,14 +25,6 @@
   color: var(--preto-scriptum);
 }
 
-.hero-right {
-  min-width: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero-left > p {
   font-size: 1.05rem;
   line-height: 1.75;
@@ -50,6 +44,14 @@
   background: var(--amarelo-scriptum);
 }
 
+.hero-right {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-right img {
   width: 100%;
   max-width: 400px;
@@ -59,14 +61,109 @@
   border-radius: 12px;
 }
 
-@media (max-width: 768px) {
+/* Decoração */
+.hero-decoration {
+  position: absolute;
+  left: 47%;
+  top: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-decoration img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-star {
+  width: 100px;
+  animation: hero-star-move 4s ease-in-out infinite !important;
+}
+
+.hero-flower {
+  width: 85px;
+  animation: hero-flower-move 3s ease-in-out infinite !important;
+}
+
+/* Animações */
+@keyframes hero-star-move {
+  0%, 100% {
+    transform: rotate(-15deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(15deg) scale(1.15);
+  }
+}
+
+@keyframes hero-flower-move {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1033px) {
+  .hero-container {
+    gap: 1.5rem;
+  }
+
+  .hero-left {
+    flex: 1.2;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+  }
+
+  .hero-left > p {
+    font-size: 0.95rem;
+  }
+
+  .hero-decoration {
+    position: static;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-star {
+    width: 55px;
+  }
+
+  .hero-flower {
+    width: 48px;
+  }
+
+  .hero-right {
+    flex: 0.9;
+  }
+
+  .hero-right img {
+    max-width: 320px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 767px) {
   .hero-container {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem var(--margem-conteudo);
   }
 
-  .hero-left {
+  .hero-left,
+  .hero-right {
     width: 100%;
   }
 
@@ -74,14 +171,25 @@
     font-size: clamp(2.1rem, 6vw, 3rem);
   }
 
-  .hero-right {
-    width: 100%;
+  .hero-decoration {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .hero-star {
+    width: 65px;
+  }
+
+  .hero-flower {
+    width: 55px;
   }
 
   .hero-right img {
     width: 100%;
     max-width: 400px;
-    height: auto;
     aspect-ratio: 5 / 4;
     object-fit: cover;
   }
