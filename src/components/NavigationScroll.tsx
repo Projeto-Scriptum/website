@@ -19,6 +19,7 @@ export default function NavigationScroll() {
       "/": "Projeto Scriptum | Arte, escrita e comunidade",
       "/galeria": "Galeria | Projeto Scriptum",
       "/voluntariado": "Voluntariado | Projeto Scriptum",
+      "/apoio": "Rede de apoio | Projeto Scriptum",
     };
     document.title = titles[location.pathname] ?? "Página não encontrada | Projeto Scriptum";
 
