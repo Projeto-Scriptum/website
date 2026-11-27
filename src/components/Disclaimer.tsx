@@ -1,8 +1,10 @@
 import "./Disclaimer.css";
+import { Link } from "react-router-dom";
+import { linksApoio } from "../data/apoio";
 
 export default function Disclaimer() {
     return (
-        <section className="disclaimer">
+        <section className="disclaimer" id="cuidado-responsavel" tabIndex={-1} aria-labelledby="cuidado-titulo">
             <div className="disclaimer-container">
                 <svg
                     className="disclaimer-icon"
@@ -19,10 +21,17 @@ export default function Disclaimer() {
                     </g>
                 </svg>
                 <div className="disclaimer-content">
-                    <h2 className="disclaimer-title">Cuidado responsável</h2>
+                    <h2 className="disclaimer-title" id="cuidado-titulo">Cuidado responsável</h2>
                     <p className="disclaimer-text">
-                        O Projeto Scriptum promove expressão, convivência e bem-estar, mas não substitui psicoterapia, acompanhamento médico ou serviços de emergência. Em uma crise, procure ajuda profissional ou ligue 188 para o CVV.
+                        O Projeto Scriptum promove expressão, convivência e bem-estar, mas não substitui psicoterapia, acompanhamento médico ou serviços de emergência.
                     </p>
+                    <p className="disclaimer-urgencia">
+                        Em uma emergência médica ou risco à vida, <a href={linksApoio.samu}>ligue 192 para o SAMU</a>.
+                        Para apoio emocional, o CVV atende pelo 188.
+                    </p>
+                    <Link className="action-link disclaimer-action" to="/apoio">
+                        Conheça a rede de apoio <span aria-hidden="true">→</span>
+                    </Link>
                 </div>
             </div>
         </section>

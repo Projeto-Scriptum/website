@@ -63,6 +63,11 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/apoio" className="nav-link">
+                Apoio
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/voluntariado" className="nav-link btn-voluntario">
                 Quero ser voluntário
               </NavLink>

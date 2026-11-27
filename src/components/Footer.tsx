@@ -12,6 +12,7 @@ export default function Footer() {
         <nav aria-label="Navegação do rodapé">
           <Link to="/#sobre">Sobre o projeto</Link>
           <Link to="/galeria">Galeria</Link>
+          <Link to="/apoio">Rede de apoio</Link>
           <Link to="/voluntariado">Voluntariado</Link>
         </nav>
       </div>
